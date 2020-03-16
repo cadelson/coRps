@@ -1,0 +1,14 @@
+## PROJECT:  coRps
+## AUTHOR:   Adelson | USAID
+## PURPOSE:  stucture dataset for use in ggplot explore
+## DATE:     2020-03-16
+
+library(tidyverse)
+library(ICPIutilities)
+
+dataset_url <- "https://media.githubusercontent.com/media/ICPI/TrainingDataset/master/Output/MER_Structured_TRAINING_Datasets_PSNU_IM_FY18-20_20200214_v1_1.txt"
+
+ ggplot(data=FY20Q1_Jupiter_TXNEW)+
++     geom_col(mapping=aes(x=period, y=val, fill=primepartner,), show.legend=FALSE)+
++     facet_wrap(~ primepartner, nrow=2)+
++     ggtitle("Orion Scaling Up Treatment")
